@@ -1,7 +1,7 @@
 package com.ohgiraffers.section01.section01.exception;
 
 public class ExceptionTest {
-    public void checkEnoughMoney(int price, int balance) throws ArithmeticException {//throws는 메소드한테 어떤 예외처리를 하는지 알려준다.
+    public void checkEnoughMoney(int price, int balance) throws ArithmeticException {//throws는 이 메소드를 사용하면 어떤 예외처리를 해야 하는지 알려준다.
         System.out.println("가지고 계신 돈은 " + balance + "원 입니다.");
 
         if(balance >= price){
