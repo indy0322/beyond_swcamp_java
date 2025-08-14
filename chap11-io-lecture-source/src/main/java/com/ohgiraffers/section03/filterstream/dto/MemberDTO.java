@@ -7,7 +7,7 @@ public class MemberDTO implements Serializable {
 
 
     private String id;
-    
+
     /* 설명. transient 키워드가 달린 필드는 객체 입출력의 직렬화에서 제외된다. */
     private transient String pwd;
     private String name;
