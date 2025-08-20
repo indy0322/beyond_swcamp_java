@@ -28,14 +28,21 @@ public class Application5 {
         System.out.println("que = " + que);
         
         /* 설명. PriorityQueue를 활용하면 정렬된 상태를 활용할 수 있다. */
-        Queue<Integer> priortyQue = new PriorityQueue<>();
-        priortyQue.offer(1);
-        priortyQue.offer(5);
-        priortyQue.offer(3);
-        priortyQue.offer(4);
-        priortyQue.offer(2);
+        Queue<Integer> priorityQue = new PriorityQueue<>();
+        priorityQue.offer(1);
+        priorityQue.offer(5);
+        priorityQue.offer(3);
+        priorityQue.offer(4);
+        priorityQue.offer(2);
 
-        System.out.println("priortyQue = " + priortyQue);
+        System.out.println("priortyQue = " + priorityQue); // 힙정렬 관련 트리에 저장된 순서로 나온 상태
+
+        System.out.println(priorityQue.poll());
+        System.out.println(priorityQue.poll());
+        System.out.println(priorityQue.poll());
+        System.out.println(priorityQue.poll());
+        System.out.println(priorityQue.poll());
+
+        System.out.println("priorityQue = " + priorityQue);
     }
-
 }
