@@ -60,6 +60,7 @@ public class MemberRepository {
 
             while(true){
                 memberList.add((Member)ois.readObject());
+                //System.out.println(((Member) ois.readObject()).getId());
             }
 
         } catch (EOFException e) {
