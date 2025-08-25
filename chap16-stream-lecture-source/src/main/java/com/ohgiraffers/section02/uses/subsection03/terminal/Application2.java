@@ -2,7 +2,7 @@ package com.ohgiraffers.section02.uses.subsection03.terminal;
 
 /* 설명.
  *  reduce()란?
- *   - 스트림의 요소들을 하나의 갑스로 줄이는(reduce) 최종연산
+ *   - 스트림의 요소들을 하나의 값으로 줄이는(reduce) 최종연산
  *   - 누적 연산을 통해 스트림의 모든 요소를 단일 결과로 결합
  *   - BinaryOperator 형태의 람다식 활용
  *
@@ -40,7 +40,7 @@ public class Application2 {
         /* 설명. 3. 병령 처리용 reduce: 1개의 초기값, 1개의 누적용 람다식, 1개의 결합용 람다식 */
         /* 설명. 세번째로 전달된 람다식은 병렬 스트림 일때만 활용하는 cpu의 여러 코어로 계산한 결과를 결합할 용도의 람다식이다. */
         Integer reduceTreeParam = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-                .parallel()  //주석을 통해 숱아 스트림과 병결 스트림을 모드 테스트 해볼 수 있음
+                .parallel()  //주석을 통해 순차 스트림과 병렬 스트림을 모두 테스트 해 볼 수 있음
                 .reduce(100,(a,b) -> {  // 초기값은 parallel일 경우는 요소 갯수 만큼 적용
                     System.out.printf("누적: a=%d, b=%d\n", a, b);
                     return a + b;

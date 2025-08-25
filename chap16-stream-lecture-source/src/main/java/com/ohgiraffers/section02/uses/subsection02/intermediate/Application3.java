@@ -16,16 +16,22 @@ public class Application3 {
         List<Integer> numbers = Arrays.asList(5, 10, 99, 2, 1, 35, 67, 23);
 
         /* 설명. 기본 정렬: 오름차순 */
-        List<Integer> ascList = numbers.stream().sorted().collect(Collectors.toList());  // 최종연산: 원하는 컬렉션으로 바꿈
+        List<Integer> ascList = numbers.stream()
+                .sorted()
+                .collect(Collectors.toList());  // 최종연산: 원하는 컬렉션으로 바꿈
         System.out.println("ascList = " + ascList); //오름차순 정렬
 
 
         /* 설명. 기본 정렬: 내림차순 */
-        List<Integer> descList = numbers.stream().sorted(new DescInteger()).collect(Collectors.toList());  // 최종연산: 원하는 컬렉션으로 바꿈
+        List<Integer> descList = numbers.stream()
+                .sorted(new DescInteger())
+                .collect(Collectors.toList());  // 최종연산: 원하는 컬렉션으로 바꿈
         System.out.println("descList = " + descList);
 
         /* 설명. Comparator.reverse */
-        List<Integer> descList2 = numbers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());  // 기본 정렬 기준을 뒤집는 용도로 사용가능
+        List<Integer> descList2 = numbers.stream()
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());  // 기본 정렬 기준을 뒤집는 용도로 사용가능
         System.out.println("descList = " + descList2);
     }
 }

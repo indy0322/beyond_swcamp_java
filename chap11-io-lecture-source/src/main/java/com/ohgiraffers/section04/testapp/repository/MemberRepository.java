@@ -140,7 +140,6 @@ public class MemberRepository {
                 return 1;
             }
         }
-
         return 0;
     }
 

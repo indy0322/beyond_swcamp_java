@@ -16,7 +16,7 @@ public class Application1 {
 
         boolean result = false;
 
-        biFunction = String::equals;
+        biFunction = String::equals; //클래스 이름으로 인스턴스 변수를 선언할 때
 //        biFunction = (x, y) -> x.equals(y);
         result = biFunction.apply(str1, str2);
         System.out.println("result = " + result);
