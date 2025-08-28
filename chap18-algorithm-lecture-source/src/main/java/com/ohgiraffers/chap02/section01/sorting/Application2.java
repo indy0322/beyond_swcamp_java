@@ -29,22 +29,19 @@ public class Application2 {
      *  예시 출력 2
      *    - 64 42 34 29 28 12
      * */
-    public static void main(String[] args) {
-
-    }
 
 
     public static void solution(int length, int[] arr) {
         for(int i = 0; i < length; i++){
             int maxIndex = i;
             for(int j = i + 1; j < length; j++){ //현재 i위치를 제외한 우측 나머지 부분
-                if(arr[i] < arr[j]){
+                if(arr[maxIndex] < arr[j]){
                     maxIndex = j;
-                    int temp = arr[i];
-                    arr[i] = arr[maxIndex];
-                    arr[maxIndex] = temp;
                 }
             }
+            int temp = arr[i];
+            arr[i] = arr[maxIndex];
+            arr[maxIndex] = temp;
         }
     }
 }

@@ -38,11 +38,11 @@ class Application5Test {
         exp2 = new int[]{39, 33, 32, 26, 22, 20, 19, 11, 8, 7};
     }
 
-    public static Stream<Arguments> provideDescendingSource() {
-        return Stream.of(
-                arguments(low1, high1, act1, exp1),
+    public static Stream<Arguments> provideDescendingSource() { //Arguments는 JUnit5의 파라미터라이즈드 테스트에서 테스트 메서드에 전달할 인자 묶음을 표현하는 클래스이다.
+        return Stream.of( //Stream.of는 배열이나 여러 개의 값을 받아서 스트림 객체를 만들어준다.
+                arguments(low1, high1, act1, exp1), //arguments(...)는 한 세트의 테스트 케이스를 의미.
                 arguments(low2, high2, act2, exp2)
-        );
+        ); //반환형이 Stream<Arguments>이므로, 여러 개의 테스트 케이스를 한 번에 공급할 수 있다.
     }
 
     @DisplayName("병합 정렬 테스트")
