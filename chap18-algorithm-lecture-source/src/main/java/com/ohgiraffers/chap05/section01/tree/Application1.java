@@ -29,7 +29,7 @@ public class Application1 {
 
         parent = new int[N + 1];
         isVisited = new boolean[N + 1] ;
-        list = new ArrayList[N + 1]; //각 노드가 연결된 노드를 담은 ArrayList를 노드 갯수만큼 관리하는 배열
+        list = new ArrayList[N + 1];     //각 노드가 연결된 노드를 담은 ArrayList를 노드 갯수만큼 관리하는 배열
 
         for(int i = 0; i <= N; i++){
             list[i] = new ArrayList<>();
